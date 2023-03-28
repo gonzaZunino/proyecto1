@@ -10,7 +10,7 @@
 body {
  background-color: #A80F0F;   
 }
-/*Inicio Navegador */
+/*Inicio Navegador*/ 
 header{
     background-color: white;
     display: flex;
@@ -19,6 +19,13 @@ header{
 
 .logo {
     width: 100px;
+}
+
+@media (max-width:320px){
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .navegador {
@@ -62,6 +69,23 @@ header{
 }
 
 
+.tituloh2 {
+    display: flex;
+    width: 90vr;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.btn{
+    background-color: #A80F0F;
+    justify-content: center;
+}
+
+
+
 .menu {
     display: flex;
     list-style-type: none;
@@ -79,18 +103,6 @@ header{
 h3{
     font-size: 30px;
     margin: 10px;
-}
-
-.tituloh2 {
-    display: flex;
-    width: 90vr;
-    font-size: 40px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #ffffff;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
 }
 
 .categorias {
@@ -124,7 +136,6 @@ padding: 10px;
 margin: 10px;
 align-content: center;
 text-align: center;
-
 }
 
 .tarjetas div{
@@ -166,9 +177,9 @@ text-align: center;
     border: 0;
     border-radius: 5px;
     align-items: center;
+    }
   /*Final productos*/  
     
-}
 /* comentario a ver que pasa
 main{
     margin: 10px;
@@ -202,12 +213,6 @@ main form input{
     border: #000000 solid;
     height: 100%;
 }
-.promociones form input{
-    height: 100%;
-    width: 500px;
-    padding: 10px;
-    margin: 10px;
-}
 
 .promociones form button{
     height: 100%;
@@ -218,6 +223,38 @@ main form input{
     border-radius: 5px;
     color: white;
 }
+
+@media(max-width:320px){
+    .promociones h3{
+        font-size: 20px;
+        text-align:center;
+    }
+    .promociones{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: #000000 solid;
+        height: 100%;
+        align-items: center;
+    }
+
+    .promociones form input{
+        font-size: 10px;
+    }
+    
+    .promociones form button{
+        height: 40%;
+        background-color: #A80F0F;
+        border: 1px solid black;
+        border-radius: 5px;
+        color: white;
+        
+    }
+
+}
 .carousel{
     height: 450px;
     margin: 20px;
@@ -226,10 +263,15 @@ main form input{
 
 .carousel div img{
     object-fit: cover;
-    height: 420px;
-    margin: 20px;
-    
-    
+    height: 320px;
+    margin: 20px; 
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    width: 40px;
+    height: 40px;
+    background-color: #A80F0F;
+
 }
 
 /*Final de promociones*/
@@ -266,6 +308,38 @@ main form input{
     list-style-type: none;
     text-decoration: none;
    
+}
+@media(max-width:320px){
+    .footer{
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: #ffffff;
+        list-style-type: none;
+        text-decoration: none;
+    }
+    
+    .footer .insta{
+        color: #A80F0F;
+        font-size: 32px;
+    
+    }
+    
+    .footer .face{
+        color: #A80F0F;
+        font-size: 32px;
+    }
+    
+    .datos-footer ul{
+        list-style-type: none;
+        text-decoration: none;
+        font-size: 10px;
+        margin: 5px;
+       
+    }
 }
 
 /*Fin footer/*
@@ -371,4 +445,97 @@ main form input{
     border-radius: 5px;
     
 
+}
+
+@media(max-width:320px){
+    .formulario{
+        display: flex;
+        width: 100%;
+        border: #ffffff solid 1px;
+        border-radius: 5px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "nombre"
+                             "apellido"
+                             "email"
+                             "telefono"
+                             "postal"
+                             "sexo"
+                             "contraseña"
+                             "confContr"
+                             "enviar"
+                             "reset";
+                             
+    }
+    
+    .formulario label{
+        display: flex;
+        flex-direction:column;
+        color: rgb(255, 255, 255);
+        background-color:#A80F0F;        
+    }
+    
+    .formulario label input{
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background-color:#A80F0F;
+        border: none;
+        border-bottom: #ffffff solid 1px;
+    }
+    
+   /* .formulario .hijo1{
+        grid-area:nombre;
+    
+    }
+    
+    .formulario .hijo2{
+        grid-area: apellido;
+    }
+    
+    .formulario .hijo3{
+        grid-area: email;
+    }
+    
+    .formulario .hijo4{
+        grid-area: telefono;
+    }
+    
+    .formulario .hijo5{
+        grid-area: postal;
+    }
+    
+    .formulario .hijo6{
+        grid-area: contraseña;
+    }
+    .formulario .hijo7{
+        grid-area: confContr;
+        
+    }
+    .formulario .hijo8{
+        grid-area: enviar;
+        padding: 5px;
+    }
+    .formulario .hijo9{
+        grid-area: reset;
+        padding: 5px;
+    }
+    
+    .formulario .hijo8 input{
+        color: rgb(0, 0, 0);
+        background-color: white;
+        padding: 5px;
+        border: #000000 solid 1px;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+    .formulario .hijo9 input{
+        color: rgb(0, 0, 0);
+        background-color: white;
+        padding: 5px;
+        border: #000000 solid 1px;
+        font-size: 20px;
+        border-radius: 5px;
+        
+    
+    }*/
 }
