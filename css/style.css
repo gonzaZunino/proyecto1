@@ -1,541 +1,224 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Titillium Web', sans-serif;  
-}
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
-
-
-body {
- background-color: #A80F0F;   
-}
-/*Inicio Navegador*/ 
-header{
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
 }
 
-.logo {
-    width: 100px;
-}
-
-@media (max-width:320px){
-    .logo{
-        width: 50px;
-        height: 50px;
-    }
-}
-
-.navegador {
-    display: flex;
-    align-items: center;
-}
-.navegador .fa-bars{
-    font-size: 32px;
-    margin: 10px;
-    display: none;
-}
-.navegador ul{
-    transition: 0.5s;
-}
-
-@media(max-width:550px){
-    .navegador .fa-bars{
-        display: block;
-        margin: 10px;
-    }
-    .navegador .fa-bars:hover + ul{
-        right: 0;
-    }
-
-    .navegador ul:hover{
-        right: 0;
-    }
-    .navegador ul{
-        right: -350px;
-        top:0;
-        position: fixed;
-        width: 250px;
-        height: 100vh;
-        flex-direction: column;
-        background-color: white;
-        justify-content: start;
-        align-items: center;
-        
-    }
-    
+.row, .container, .container-fluid {
+  margin: 0;
+  padding: 0;
 }
 
 
-.tituloh2 {
-    display: flex;
-    width: 90vr;
-    padding: 10px;
-    margin: 10px;
-    background-color: #ffffff;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-}
-.btn{
-    background-color: #A80F0F;
-    justify-content: center;
-}
-
-
-
-.menu {
-    display: flex;
-    list-style-type: none;
-    gap: 15px;
-}
-
-.menu__nav a {
-    display: flex;
-    color: #000000;
-    text-decoration: none;
-}
-
-/*fin navegador */
 /*menu productos */
-h3{
-    font-size: 30px;
-    margin: 10px;
+h3 {
+  font-size: 30px;
+  margin: 10px;
 }
 
 .categorias {
-    height: 80px;
-    padding: 10px;
-    margin: 10px;
+  height: 80px;
+  padding: 10px;
+  margin: 10px;
 }
 
 .categorias-productos {
-    list-style: none;
-    display: flex;
-    justify-content: start;
+  list-style: none;
+  display: flex;
+  justify-content: start;
 }
-
 
 .categorias-productos li a {
-    display: block;
-    font-size: 20px;
-    text-decoration: none;
-    color: #ffffff;
-    padding: 20px 10px;
-  
-   
-}
-.tarjetas{
-display: flex;
-justify-content:space-between;
-flex-wrap: wrap;
-width: 100%;
-padding: 10px;
-margin: 10px;
-align-content: center;
-text-align: center;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 20px 10px;
 }
 
-.tarjetas div{
-    border: solid black 2px;
-    margin: 20px;
-    padding: 20px;
-    width: 25%;
-    height: 25%;
-    background-color: #ffffff;
-    align-items: flex-start;
-    justify-content: center;
-
-}
-.tarjetas div img{
-    width: 90%;
-    height: 90%;
-    align-items: center;
-    justify-content: center;
-    object-fit: cover;
-    padding: 2px;
-}
-.tarjetas div h4{
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    align-items: center;
+.tarjetas {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  align-content: center;
+  text-align: center;
 }
 
-.tarjetas div p{
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-}
-.tarjetas div button{
-    margin: 10px;
-    padding: 20px;
-    background-color: #A80F0F;
-    color: white;
-    border: 0;
-    border-radius: 5px;
-    align-items: center;
-    }
-  /*Final productos*/  
-    
-/* comentario a ver que pasa
-main{
-    margin: 10px;
-    padding: 10px;
-    
+.tarjetas div {
+  border: solid black 2px;
+  margin: 20px;
+  padding: 20px;
+  width: 25%;
+  height: 25%;
+  background-color: #ffffff;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-main form div input{
-    width: 20px;
-    margin: 10px;
-    padding: 10px;
+.tarjetas div img {
+  width: 90%;
+  height: 90%;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  padding: 2px;
 }
-main form input{
-    padding: 10px;
-    margin: 10px;
-    height: 80%;
-    width: 50%;
-}
-*/
 
+.tarjetas div h4 {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.tarjetas div p {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.tarjetas div button {
+  margin: 10px;
+  padding: 20px;
+  background-color: #A80F0F;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  align-items: center;
+}
+
+/*Final productos*/
 /* Promociones */
-.promociones{
+.promociones {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border: #000000 solid;
+  height: 100%;
+}
+
+.promociones form button {
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
+  background-color: #A80F0F;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+}
+
+@media (max-width: 320px) {
+  .promociones h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .promociones {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background-color: white;
-    padding: 20px;
-    margin: 10px;
     border: #000000 solid;
     height: 100%;
-}
-
-.promociones form button{
-    height: 100%;
-    margin: 10px;
-    padding: 10px;
+    align-items: center;
+  }
+  .promociones form input {
+    font-size: 10px;
+  }
+  .promociones form button {
+    height: 40%;
     background-color: #A80F0F;
     border: 1px solid black;
     border-radius: 5px;
     color: white;
+  }
+}
+.carousel {
+  height: 450px;
+  margin: 20px;
+  border-radius: 5px;
 }
 
-@media(max-width:320px){
-    .promociones h3{
-        font-size: 20px;
-        text-align:center;
-    }
-    .promociones{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        background-color: white;
-        border: #000000 solid;
-        height: 100%;
-        align-items: center;
-    }
-
-    .promociones form input{
-        font-size: 10px;
-    }
-    
-    .promociones form button{
-        height: 40%;
-        background-color: #A80F0F;
-        border: 1px solid black;
-        border-radius: 5px;
-        color: white;
-        
-    }
-
-}
-.carousel{
-    height: 450px;
-    margin: 20px;
-    border-radius: 5px;
+.carousel div img {
+  object-fit: cover;
+  height: 320px;
+  margin: 20px;
 }
 
-.carousel div img{
-    object-fit: cover;
-    height: 320px;
-    margin: 20px; 
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon{
-    width: 40px;
-    height: 40px;
-    background-color: #A80F0F;
-
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #A80F0F;
 }
 
 /*Final de promociones*/
-
 /*Footer*/
+.footer {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #ffffff;
+  padding: 20px;
+  list-style-type: none;
+  text-decoration: none;
+}
 
-.footer{
-    height: auto;
+.footer .insta {
+  color: #A80F0F;
+  font-size: 32px;
+  padding: 10px;
+}
+
+.footer .face {
+  color: #A80F0F;
+  font-size: 32px;
+  padding: 10px;
+}
+
+.datos-footer ul {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+@media (max-width: 320px) {
+  .footer {
+    height: 150px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: end;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #ffffff;
-    padding: 20px;
     list-style-type: none;
     text-decoration: none;
-}
-
-.footer .insta{
+  }
+  .footer .insta {
     color: #A80F0F;
     font-size: 32px;
-    padding: 10px;
-
-}
-
-.footer .face{
+  }
+  .footer .face {
     color: #A80F0F;
     font-size: 32px;
-    padding: 10px;
-}
-
-.datos-footer ul{
+  }
+  .datos-footer ul {
     list-style-type: none;
     text-decoration: none;
-   
-}
-@media(max-width:320px){
-    .footer{
-        height: 150px;
-        display: flex;
-        flex-direction: row;
-        align-items: end;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        background-color: #ffffff;
-        list-style-type: none;
-        text-decoration: none;
-    }
-    
-    .footer .insta{
-        color: #A80F0F;
-        font-size: 32px;
-    
-    }
-    
-    .footer .face{
-        color: #A80F0F;
-        font-size: 32px;
-    }
-    
-    .datos-footer ul{
-        list-style-type: none;
-        text-decoration: none;
-        font-size: 10px;
-        margin: 5px;
-       
-    }
-}
-
-/*Fin footer/*
-
-
-/*grid prueba*/
-.formulario{
-    width: 700px;
-    display: grid;
-    margin: 10px 25%;
-    padding: 30px;
-
-    border: #ffffff solid 1px;
-    border-radius: 10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "nombre     apellido"
-                         "email      email"
-                         "telefono   postal"
-                         "sexo       sexo"
-                         "contraseña contraseña"
-                         "confContr  confContr"
-                         "enviar     enviar"
-                         "reset      reset";
-                         
-}
-
-.formulario label{
-    display: flex;
-    flex-direction:column;
-    color: rgb(255, 255, 255);
-    background-color:#A80F0F;
-    padding: 5px;
-    margin: 1px;
-    
-}
-
-.formulario label input{
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color:#A80F0F;
-    padding: 10px;
+    font-size: 10px;
     margin: 5px;
-    border: none;
-    border-bottom: #ffffff solid 1px;
+  }
 }
 
-.formulario .hijo .sexo{
-    padding: 10px;
-}
-
-.formulario .hijo1{
-    grid-area:nombre;
-
-}
-
-.formulario .hijo2{
-    grid-area: apellido;
-}
-
-.formulario .hijo3{
-    grid-area: email;
-}
-
-.formulario .hijo4{
-    grid-area: telefono;
-}
-
-.formulario .hijo5{
-    grid-area: postal;
-}
-
-.formulario .hijo6{
-    grid-area: contraseña;
-}
-.formulario .hijo7{
-    grid-area: confContr;
-    
-}
-.formulario .hijo8{
-    grid-area: enviar;
-    padding: 5px;
-}
-.formulario .hijo9{
-    grid-area: reset;
-    padding: 5px;
-}
-
-.formulario .hijo8 input{
-    color: rgb(0, 0, 0);
-    background-color: white;
-    padding: 5px;
-    border: #000000 solid 1px;
-    font-size: 20px;
-    border-radius: 5px;
-}
-.formulario .hijo9 input{
-    color: rgb(0, 0, 0);
-    background-color: white;
-    padding: 5px;
-    border: #000000 solid 1px;
-    font-size: 20px;
-    border-radius: 5px;
-    
-
-}
-
-@media(max-width:320px){
-    .formulario{
-        display: flex;
-        width: 100%;
-        border: #ffffff solid 1px;
-        border-radius: 5px;
-        grid-template-columns: 1fr;
-        grid-template-areas: "nombre"
-                             "apellido"
-                             "email"
-                             "telefono"
-                             "postal"
-                             "sexo"
-                             "contraseña"
-                             "confContr"
-                             "enviar"
-                             "reset";
-                             
-    }
-    
-    .formulario label{
-        display: flex;
-        flex-direction:column;
-        color: rgb(255, 255, 255);
-        background-color:#A80F0F;        
-    }
-    
-    .formulario label input{
-        align-items: center;
-        justify-content: center;
-        color: white;
-        background-color:#A80F0F;
-        border: none;
-        border-bottom: #ffffff solid 1px;
-    }
-    
-   /* .formulario .hijo1{
-        grid-area:nombre;
-    
-    }
-    
-    .formulario .hijo2{
-        grid-area: apellido;
-    }
-    
-    .formulario .hijo3{
-        grid-area: email;
-    }
-    
-    .formulario .hijo4{
-        grid-area: telefono;
-    }
-    
-    .formulario .hijo5{
-        grid-area: postal;
-    }
-    
-    .formulario .hijo6{
-        grid-area: contraseña;
-    }
-    .formulario .hijo7{
-        grid-area: confContr;
-        
-    }
-    .formulario .hijo8{
-        grid-area: enviar;
-        padding: 5px;
-    }
-    .formulario .hijo9{
-        grid-area: reset;
-        padding: 5px;
-    }
-    
-    .formulario .hijo8 input{
-        color: rgb(0, 0, 0);
-        background-color: white;
-        padding: 5px;
-        border: #000000 solid 1px;
-        font-size: 20px;
-        border-radius: 5px;
-    }
-    .formulario .hijo9 input{
-        color: rgb(0, 0, 0);
-        background-color: white;
-        padding: 5px;
-        border: #000000 solid 1px;
-        font-size: 20px;
-        border-radius: 5px;
-        
-    
-    }*/
-}
+/*# sourceMappingURL=style.css.map */
